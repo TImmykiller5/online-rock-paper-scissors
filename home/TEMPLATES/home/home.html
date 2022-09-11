@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>welcome to my very first without tutorial
+wink
+    big ups emp tho</p>
+{% if user.is_authenticated %}
+hi {{user.username}}
+<ul>
+<li><p><a href="{% url 'game' %}">Game</a> </p></li>
+<li><p><a href="{% url 'logout' %}">Log Out</a> </p></li>
+</ul>
+    {% else %}
+<ul>
+
+<li><p><a href="{% url 'login' %}">Log In</a> </p></li>
+<li><p><a href="{% url 'signup' %}">SignUp</a> </p></li>
+<li><p><a href="{% url 'signup2' %}">SignUp2</a> </p></li>
+<li><p><a href="{% url 'game' %}">Game</a> </p></li>
+</ul>
+    {% endif %}
+</body>
+</html>
